@@ -1,4 +1,76 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Fèi",
+      "last_name": "Swanson",
+      "email": "b@g.com",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "first_name": "Séverine",
+      "last_name": "Newlove",
+      "email": "snewlove1@mediafire.com",
+      "password": "passwor123"
+    },
+    {
+      "id": 3,
+      "first_name": "Camélia",
+      "last_name": "Huntall",
+      "email": "rhuntall2@jigsy.com",
+      "password": "password123"
+    },
+    {
+      "id": 4,
+      "first_name": "Sòng",
+      "last_name": "Watkins",
+      "email": "swatkins3@upenn.edu",
+      "password": "password3"
+    },
+    {
+      "id": 5,
+      "first_name": "Véronique",
+      "last_name": "Taunton.",
+      "email": "etaunton4@hugedomains.com",
+      "password": "password123"
+    },
+    {
+      "id": 6,
+      "first_name": "Yú",
+      "last_name": "Forson",
+      "email": "rforson5@usatoday.com",
+      "password": "password123"
+    },
+    {
+      "id": 7,
+      "first_name": "Esbjörn",
+      "last_name": "Awty",
+      "email": "eawty6@microsoft.com",
+      "password": "password123"
+    },
+    {
+      "id": 8,
+      "first_name": "Sélène",
+      "last_name": "Roth",
+      "email": "mroth7@tripadvisor.com",
+      "password": "password123"
+    },
+    {
+      "id": 9,
+      "first_name": "Bénédicte",
+      "last_name": "Mc Dermid",
+      "email": "rmcdermid8@census.gov",
+      "password": "password123"
+    },
+    {
+      "id": 10,
+      "first_name": "Håkan",
+      "last_name": "Nisot",
+      "email": "pnisot9@last.fm",
+      "password": "password123"
+    }
+  ],
   "tasks": [
     {
       "id": 1,
