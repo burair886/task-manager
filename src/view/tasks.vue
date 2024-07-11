@@ -2,7 +2,13 @@
   <div class="max-w-3xl mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold text-gray-800 mb-4">Tasks</h1>
     <TaskFilters class="mb-4" />
+
     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <router-link
+      to="/new-task"
+      class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300"
+      >Create New Task</router-link
+    >
       <ul>
         <li
           v-for="task in filteredTasks"
@@ -15,19 +21,11 @@
               {{ task.priority }} - {{ task.dueDate }}
             </p>
           </div>
-          <router-link
-            :to="'/task/' + task.id"
-            class="text-blue-500 hover:text-blue-700"
-            >Details</router-link
-          >
+         
         </li>
       </ul>
     </div>
-    <router-link
-      to="/new-task"
-      class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300"
-      >Create New Task</router-link
-    >
+ 
   </div>
 </template>
 
@@ -40,8 +38,6 @@ const store = useStore();
 
 onMounted(async () => {
   await store.dispatch("fetchTasks");
-  await store.dispatch("fetchUsers");
-  console.log(store.state.users);
 });
 
 const filteredTasks = computed(() => store.getters.filteredTasks);

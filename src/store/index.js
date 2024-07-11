@@ -56,28 +56,26 @@ export default createStore({
   },
   getters: {
     filteredTasks: (state) => {
-      console.log("State:", state); // Log the entire state for debugging
-
       return state.tasks.filter((task) => {
-        // const taskDueDate = new Date(task.dueDate);
-        // const startDate = state.filters.dateRange[0]
-        //   ? new Date(state.filters.dateRange[0])
-        //   : null;
-        // const endDate = state.filters.dateRange[1]
-        //   ? new Date(state.filters.dateRange[1])
-        //   : null;
+
+        const taskDueDate = new Date(task.dueDate);
+        const startDate = state.filters.dateRange[0]
+          ? new Date(state.filters.dateRange[0])
+          : null;
+        const endDate = state.filters.dateRange[1]
+          ? new Date(state.filters.dateRange[1])
+          : null;
 
         const isPriorityMatch =
-          !state.filters.priority || task.priority === state.filters.priority;
-        // const isAssigneeMatch =
-        //   !state.filters.assignee || task.assignee === state.filters.assignee;
-        // const isDateRangeMatch =
-        //   !startDate ||
-        //   !endDate ||
-        //   (taskDueDate >= startDate && taskDueDate <= endDate);
+          !state.filters.priority.toLowerCase() || task.priority.toLowerCase()  === state.filters.priority.toLowerCase() ;
+        const isAssigneeMatch =
+          !state.filters.assignee || task.assignee == state.filters.assignee;
+        const isDateRangeMatch =
+          !startDate ||
+          !endDate ||
+          (taskDueDate >= startDate && taskDueDate <= endDate);
 
-        // return isPriorityMatch && isAssigneeMatch && isDateRangeMatch;
-        return isPriorityMatch
+        return isPriorityMatch && isAssigneeMatch && isDateRangeMatch;
       });
     },
   },
